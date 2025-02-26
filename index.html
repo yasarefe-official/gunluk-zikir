@@ -1,0 +1,337 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günlük Zikirler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Günlük Zikirler</h1>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Tema değiştir">
+                <div class="icon-container">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+            </button>
+            <div class="tab-container">
+                <button class="tab-button active" data-tab="sabah">Sabah Zikirleri</button>
+                <button class="tab-button" data-tab="aksam">Akşam Zikirleri</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="sabah" class="tab-content active">
+                <h2>SABAH ZİKİRLERİ</h2>
+                
+                <div class="zikir-item">
+                    <h3>1. Ayet-el Kürsi</h3>
+                    <div class="arabic">
+                        اللَّهُ لَا إِل!ٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۚ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhü lâ ilâhe illâ hüvel hayyül kayyûm. Lâ te'huzühû sinetün ve lâ nevm. Lehû mâ fîs semâvâti ve mâ fîl ard. Men zellezî yeşfeu indehû illâ bi iznih. Ya'lemü mâ beyne eydîhim ve mâ halfehüm. Ve lâ yuhîtûne bi şey'in min ilmihî illâ bi mâ şâe. Vesia kürsiyyühüs semâvâti vel ard. Ve lâ yeûdühû hıfzuhümâ ve hüvel aliyyül azîm.
+                    </div>
+                    <div class="kaynak">(Bakara 255)</div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>2. İhlas Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾ اللَّهُ الصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul hüvellâhü ehad. Allâhüs samed. Lem yelid ve lem yûled. Ve lem yekün lehû küfüven ehad.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>3. Felak Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul eûzü bi rabbil felak. Min şerri mâ halak. Ve min şerri ğâsikın izâ vekab. Ve min şerrin neffâsâti fil ukad. Ve min şerri hâsidin izâ hased.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>4. Nas Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿١﴾ مَلِكِ النَّاسِ ﴿٢﴾ إِلَٰهِ النَّاسِ ﴿٣﴾ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿٤﴾ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿٥﴾ مِنَ الْجِنَّةِ وَالنَّاسِ ﴿٦﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul eûzü bi rabbin nâs. Melikin nâs. İlâhin nâs. Min şerril vesvâsil hannâs. Ellezî yüvesvisü fî sudûrin nâs. Minel cinneti ven nâs.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>5. Sabah Duası</h3>
+                    <div class="arabic">
+                        اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhümme bike asbahnâ ve bike emseynâ ve bike nahyâ ve bike nemûtü ve ileyken nüşûr.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'ım! Seninle sabaha erdik, Seninle akşama erdik. Seninle yaşar, Seninle ölürüz ve dönüş ancak sanadır.)
+                    </div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>6. Seyyidü'l İstiğfar</h3>
+                    <div class="arabic">
+                        اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhümme ente rabbî lâ ilâhe illâ ente halaktenî ve ene abdüke ve ene alâ ahdike ve va'dike mestetat'tü eûzü bike min şerri mâ sana'tü ebûü leke bi ni'metike aleyye ve ebûü bi zenbî fağfir lî fe innehû lâ yağfiruz zünûbe illâ ente.
+                    </div>
+                    <div class="anlam">
+                        (Bu dua "Seyyidü'l İstiğfar" olarak bilinir.)
+                    </div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>7. Hasbunallah (7 defa)</h3>
+                    <div class="arabic">
+                        حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Hasbiyallâhü lâ ilâhe illâ hüve aleyhi tevekkeltü ve hüve rabbül arşil azîm.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah bana yeter. O'ndan başka ilah yoktur. O'na tevekkül ettim. O, büyük arşın Rabbidir.)
+                    </div>
+                    <button class="counter-button" data-count="7">
+                        <span class="count">0</span>
+                        <span class="target">/7</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>8. Sübhanallah ve Bihamdihi (100 defa)</h3>
+                    <div class="arabic">
+                        سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Sübhânallâhi ve bi hamdihî.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'ı bütün eksikliklerden tenzih ederim ve O'na hamd ederim.)
+                    </div>
+                    <button class="counter-button" data-count="100">
+                        <span class="count">0</span>
+                        <span class="target">/100</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>9. La İlahe İllallah (100 defa)</h3>
+                    <div class="arabic">
+                        لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Lâ ilâhe illallâhü vahdehû lâ şerîke leh. Lehül mülkü ve lehül hamdü ve hüve alâ külli şey'in kadîr.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'tan başka ilah yoktur. O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na aittir ve O her şeye kadirdir.)
+                    </div>
+                    <button class="counter-button" data-count="100">
+                        <span class="count">0</span>
+                        <span class="target">/100</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="aksam" class="tab-content">
+                <h2>AKŞAM ZİKİRLERİ</h2>
+                
+                <div class="zikir-item">
+                    <h3>1. Akşam Duası</h3>
+                    <div class="arabic">
+                        اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhümme bike emseynâ ve bike asbahnâ ve bike nahyâ ve bike nemûtü ve ileykel masîr.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'ım! Seninle akşama erdik, Seninle sabaha erdik. Seninle yaşar, Seninle ölürüz ve dönüş ancak sanadır.)
+                    </div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+                
+                <div class="zikir-item">
+                    <h3>2. Ayet-el Kürsi</h3>
+                    <div class="arabic">
+                        اللَّهُ لَا إِل!ٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۚ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhü lâ ilâhe illâ hüvel hayyül kayyûm. Lâ te'huzühû sinetün ve lâ nevm. Lehû mâ fîs semâvâti ve mâ fîl ard. Men zellezî yeşfeu indehû illâ bi iznih. Ya'lemü mâ beyne eydîhim ve mâ halfehüm. Ve lâ yuhîtûne bi şey'in min ilmihî illâ bi mâ şâe. Vesia kürsiyyühüs semâvâti vel ard. Ve lâ yeûdühû hıfzuhümâ ve hüvel aliyyül azîm.
+                    </div>
+                    <div class="kaynak">(Bakara 255)</div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>3. İhlas Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾ اللَّهُ الصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ﴿٤﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul hüvellâhü ehad. Allâhüs samed. Lem yelid ve lem yûled. Ve lem yekün lehû küfüven ehad.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>4. Felak Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul eûzü bi rabbil felak. Min şerri mâ halak. Ve min şerri ğâsikın izâ vekab. Ve min şerrin neffâsâti fil ukad. Ve min şerri hâsidin izâ hased.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>5. Nas Suresi (3 defa)</h3>
+                    <div class="arabic">
+                        قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿١﴾ مَلِكِ النَّاسِ ﴿٢﴾ إِلَٰهِ النَّاسِ ﴿٣﴾ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ﴿٤﴾ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ﴿٥﴾ مِنَ الْجِنَّةِ وَالنَّاسِ ﴿٦﴾
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Kul eûzü bi rabbin nâs. Melikin nâs. İlâhin nâs. Min şerril vesvâsil hannâs. Ellezî yüvesvisü fî sudûrin nâs. Minel cinneti ven nâs.
+                    </div>
+                    <button class="counter-button" data-count="3">
+                        <span class="count">0</span>
+                        <span class="target">/3</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>6. Seyyidü'l İstiğfar</h3>
+                    <div class="arabic">
+                        اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Allâhümme ente rabbî lâ ilâhe illâ ente halaktenî ve ene abdüke ve ene alâ ahdike ve va'dike mestetat'tü eûzü bike min şerri mâ sana'tü ebûü leke bi ni'metike aleyye ve ebûü bi zenbî fağfir lî fe innehû lâ yağfiruz zünûbe illâ ente.
+                    </div>
+                    <div class="anlam">
+                        (Bu dua "Seyyidü'l İstiğfar" olarak bilinir.)
+                    </div>
+                    <button class="counter-button" data-count="1">
+                        <span class="count">0</span>
+                        <span class="target">/1</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>7. Hasbunallah (7 defa)</h3>
+                    <div class="arabic">
+                        حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Hasbiyallâhü lâ ilâhe illâ hüve aleyhi tevekkeltü ve hüve rabbül arşil azîm.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah bana yeter. O'ndan başka ilah yoktur. O'na tevekkül ettim. O, büyük arşın Rabbidir.)
+                    </div>
+                    <button class="counter-button" data-count="7">
+                        <span class="count">0</span>
+                        <span class="target">/7</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>8. Sübhanallah ve Bihamdihi (100 defa)</h3>
+                    <div class="arabic">
+                        سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Sübhânallâhi ve bi hamdihî.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'ı bütün eksikliklerden tenzih ederim ve O'na hamd ederim.)
+                    </div>
+                    <button class="counter-button" data-count="100">
+                        <span class="count">0</span>
+                        <span class="target">/100</span>
+                    </button>
+                </div>
+
+                <div class="zikir-item">
+                    <h3>9. La İlahe İllallah (100 defa)</h3>
+                    <div class="arabic">
+                        لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+                    </div>
+                    <div class="okunusu">
+                        <span class="okunusu-title">Okunuşu:</span> Lâ ilâhe illallâhü vahdehû lâ şerîke leh. Lehül mülkü ve lehül hamdü ve hüve alâ külli şey'in kadîr.
+                    </div>
+                    <div class="anlam">
+                        (Anlamı: Allah'tan başka ilah yoktur. O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na aittir ve O her şeye kadirdir.)
+                    </div>
+                    <button class="counter-button" data-count="100">
+                        <span class="count">0</span>
+                        <span class="target">/100</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="reset-all" class="reset-button">Tümünü Sıfırla</button>
+            <div class="copyright">@yasar</div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
