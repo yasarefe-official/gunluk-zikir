@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const newCount = currentCount + 1;
                 countElement.textContent = newCount;
                 
-                // Save to localStorage
+                // Save to localStorage with date
                 localStorage.setItem(buttonId, newCount);
                 
                 // Check if target reached
@@ -68,23 +68,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Check if we need to reset counters (new day)
+    checkDailyReset();
+    
     // Reset all counters
     const resetButton = document.getElementById('reset-all');
     
     resetButton.addEventListener('click', () => {
         if (confirm('Tüm sayaçları sıfırlamak istediğinizden emin misiniz?')) {
-            counterButtons.forEach(button => {
-                button.querySelector('.count').textContent = '0';
-                button.classList.remove('completed');
-                
-                const parentItem = button.closest('.zikir-item');
-                parentItem.classList.remove('completed');
-                
-                const buttonId = parentItem.querySelector('h3').textContent.trim();
-                localStorage.removeItem(buttonId);
-            });
+            resetAllCounters();
         }
     });
+    
+    // Function to reset all counters
+    function resetAllCounters() {
+        counterButtons.forEach(button => {
+            button.querySelector('.count').textContent = '0';
+            button.classList.remove('completed');
+            
+            const parentItem = button.closest('.zikir-item');
+            parentItem.classList.remove('completed');
+            
+            const buttonId = parentItem.querySelector('h3').textContent.trim();
+            localStorage.removeItem(buttonId);
+        });
+        
+        // Update the last reset date to today
+        localStorage.setItem('lastResetDate', getCurrentDateString());
+    }
     
     // Add long-press functionality for mobile (improved)
     counterButtons.forEach(button => {
@@ -179,4 +190,54 @@ document.addEventListener('DOMContentLoaded', function() {
             sunIcon.style.display = 'none';
         }
     });
+    
+    // Daily reset functions
+    function getCurrentDateString() {
+        const now = new Date();
+        return `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+    }
+    
+    function checkDailyReset() {
+        const today = getCurrentDateString();
+        const lastResetDate = localStorage.getItem('lastResetDate');
+        
+        // If it's a new day (or first time), reset all counters
+        if (!lastResetDate || lastResetDate !== today) {
+            resetAllCounters();
+            
+            // Show reset notification
+            showResetNotification();
+        }
+    }
+    
+    function showResetNotification() {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = 'reset-notification';
+        notification.innerHTML = 'Yeni gün başladı. Tüm zikirler sıfırlandı. <span class="close-notification">×</span>';
+        
+        // Add to document
+        document.body.appendChild(notification);
+        
+        // Show with animation
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 100);
+        
+        // Auto hide after 5 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 500);
+        }, 5000);
+        
+        // Add close button functionality
+        notification.querySelector('.close-notification').addEventListener('click', () => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 500);
+        });
+    }
 });
